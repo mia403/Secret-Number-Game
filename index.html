@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Number Game</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<!-- Start Box -->
+<div id="startBox">
+    <h1>Select Level</h1>
+    <select id="difficulty">
+        <option value="10">Easy</option>
+        <option value="50">Medium</option>
+        <option value="100">Hard</option>
+    </select>
+    <br>
+    <button id="start">Start</button>
+</div>
+
+<!-- Game + Leaderboard -->
+<div id="gameArea">
+    <div class="game-container">
+        <h2>Ready for a challenge?</h2>
+        <input type="number" id="guess" placeholder="Enter Your Guess">
+        <br>
+        <button type="button" id="Checkbtn">Check</button>
+        <button type="button" id="restartbtn">Restart</button>
+        <p id="message"></p>
+        <p id="hint"></p>
+        <p>Attempts Left: <span id="Attempt">5</span></p>
+    </div>
+
+    <div class="leaderboard-container">
+        <h2>Leader Board</h2>
+        <ol id="leaderboard"></ol>
+    </div>
+</div>
+
+<!-- Sounds -->
+<audio id="soundCorrect" src="https://www.soundjay.com/buttons/sounds/button-1.mp3"></audio>
+<audio id="soundFalse" src="https://www.soundjay.com/buttons/sounds/button-2.mp3"></audio>
+<audio id="soundClose" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+<audio id="bgsound" src="https://www.soundjay.com/free-music/sounds/jungle-run-01.mp3" loop></audio>
+
+<script src="index.js"></script>
+</body>
+</html>

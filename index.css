@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #ffcc00);
+    min-height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#startBox {
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    margin: auto;
+}
+
+
+#gameArea {
+    display: none; 
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+}
+
+
+.game-container, .leaderboard-container {
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 350px;
+    height: 380px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    display: inline-block; /* keep them side by side */
+    vertical-align: top;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+input[type="number"], select, button {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    font-weight: bold;
+    cursor: pointer;
+    background: #ffcc00;
+    color: #6a0dad;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: #fff;
+    color: #6a0dad;
+    transform: scale(1.05);
+}
+
+/* Message & Hint */
+#message {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#hint {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Leaderboard Styles */
+#leaderboard {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 0;
+    width: 300px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+#leaderboard li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#leaderboard li:first-child { background: gold; font-weight: bold; color: #2c3e50; }
+#leaderboard li:nth-child(2) { background: silver; font-weight: bold; color: #2c3e50; }
+#leaderboard li:nth-child(3) { background: #cd7f32; font-weight: bold; color: #fff; }
+
+.hidden { display: none; }
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+    #gameArea {
+        flex-direction: column; 
+        align-items: center;    
+    }
+    #startBox {
+   margin: auto;
+}
+    .game-container, .leaderboard-container {
+        width: 90%; 
+        margin-bottom: 20px;   
+    }
+
+    .game-container {
+      margin-top: 35px;
+    }
+}
+
